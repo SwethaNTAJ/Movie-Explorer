@@ -1,10 +1,20 @@
-// next.config.js
+// next.config.ts
 
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+import type { NextConfig } from 'next'
+
+const nextConfig: NextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'm.media-amazon.com',
+      },
+    ],
+  },
   eslint: {
-    ignoreDuringBuilds: true,
+    ignoreDuringBuilds: true,  
   },
 };
 
-module.exports = nextConfig;
+export default nextConfig;
+
