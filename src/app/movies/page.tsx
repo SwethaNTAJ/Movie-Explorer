@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useFavorites } from "../context/FavoritesContext"; // Import context
 
 const API_KEY = process.env.NEXT_PUBLIC_OMDB_API_KEY;
-const BASE_URL = "http://www.omdbapi.com/";
+const BASE_URL = "https://www.omdbapi.com/";
 
 export default function MoviesPage() {
   const [movies, setMovies] = useState<any[]>([]);
